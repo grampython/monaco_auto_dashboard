@@ -1,0 +1,78 @@
+{
+  "dashboardMetadata": {
+    "dashboardFilter": null,
+    "hasConsistentColors": false,
+    "name": "{{.name}}",
+    "owner": "{{.owner}}",
+    "popularity": 10,
+    "shared": true,
+    "tilesNameSize": null
+  },
+  "tiles": [
+    {
+      "name": "Service health",
+      "tileType": "SERVICES",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 0,
+        "width": 608,
+        "height": 304
+      },
+      "tileFilter": {
+        "managementZone": {
+          "id": "{{.managementzone_id}}",
+          "name": "{{.managementzone_name}}"
+        }
+      },
+      "isAutoRefreshDisabled": false,
+      "chartVisible": true
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 646,
+        "width": 684,
+        "height": 304
+      },
+      "tileFilter": {},
+      "isAutoRefreshDisabled": false,
+      "markdown": "## Dashbaord demo auto actualización\n\n# componentes:\n- jenkins\n- monaco\n- go templates (monaco)\n- script bash"
+    },
+    {
+      "name": "{{.prefix_name}} {{.managementzone_name}}",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 0,
+        "width": 1292,
+        "height": 38
+      },
+      "tileFilter": {},
+      "isAutoRefreshDisabled": false
+    },
+    {{- range $i, $e := .services}}
+      {{- if $i}},{{- end}}
+      {
+        "name": "Service {{ $e.service.displayName }}",
+        "tileType": "SERVICE_VERSATILE",
+        "configured": true,
+        "bounds": {
+          "top": {{ $e.service.position.top }},
+          "left": {{ $e.service.position.left }},
+          "width": {{ $e.service.position.width }},
+          "height": {{ $e.service.position.height }}
+        },
+        "tileFilter": {},
+        "isAutoRefreshDisabled": false,
+        "assignedEntities": [
+          "{{ $e.service.entityId }}"
+        ]
+      }
+    {{- end}}
+  ]
+}

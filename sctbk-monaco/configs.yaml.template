@@ -1,0 +1,21 @@
+configs:
+- id: ${MZ_NAME}_DASHBOARD_MICROSERVICE
+  type:
+    api: dashboard
+  config:
+    name: "Auto Dashboard Micro Services: ${MZ_NAME}"
+    template: dashboard.json
+    skip: false
+    parameters:
+      prefix_name:
+        type: environment
+        name: PREFIX
+      managementzone_id:
+        type: environment
+        name: MZ_ID
+      managementzone_name:
+        type: environment
+        name: MZ_NAME
+      owner:
+        type: environment
+        name: OWNER

@@ -1,0 +1,14 @@
+manifestVersion: "1.0"
+projects:
+  - name: sctbk-monaco
+    path: sctbk-monaco
+environmentGroups:
+- name: default
+  environments:
+  - name: sctbk
+    url:
+      type: environment
+      value: DT_URL
+    auth:
+      token:
+        name: DT_TOKEN
