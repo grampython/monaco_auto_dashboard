@@ -30,7 +30,7 @@ Configura las siguientes variables de entorno antes de ejecutar el script. Estas
 - `MZ_NAME`: Nombre de la zona de gestión (Management Zone) en Dynatrace donde se aplicarán las configuraciones.
 - `OWNER`: Identificador del propietario de la configuración o del despliegue.
 
-## ./autodashboard.sh
+## . autodashboard.sh
 
 Para desplegar la configuración de monitoreo como código con Monaco, autodashboard.sh sigue estos pasos:
 
