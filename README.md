@@ -8,7 +8,14 @@ Para ejecutar el script `autodashboard.sh`, es necesario cumplir con los siguien
 
 - Tener instalado `curl` para realizar llamadas a la API de Dynatrace.
 - Tener instalado `jq` para procesar la salida JSON de las llamadas a la API.
-- Tener instalado `go`, `envsubst` (parte de `gettext` en algunas distribuciones de Linux) para el manejo de plantillas y variables.
+- Tener instalado `go`
+-     INSTALL GO
+      sudo apt-get update
+      sudo apt-get install golang
+      # VALIDAR GO VERSION
+      go version
+
+- Tener instalado `envsubst` (parte de `gettext` en algunas distribuciones de Linux) para el manejo de plantillas y variables.
 
 Asegúrate de que estos programas estén disponibles en el `PATH` de tu sistema para que el script pueda invocarlos correctamente.
 
