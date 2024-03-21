@@ -29,6 +29,7 @@ Configura las siguientes variables de entorno antes de ejecutar el script. Estas
         - **API v2 scopes**:
           - `Read settings`
           - `Write settings`
+          - `Read entities`
         - **API v1 scopes**:
           - `Access problem and event feed, metrics, and topology`
           - `Read configuration`
