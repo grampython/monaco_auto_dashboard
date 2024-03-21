@@ -123,4 +123,4 @@ fi
 
 # Ejecuta Monaco Deploy para desplegar la configuración
 echo "Ejecutando Monaco Deploy..."
-./monaco deploy manifest.yaml
+monaco deploy manifest.yaml
